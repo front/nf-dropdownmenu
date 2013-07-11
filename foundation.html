@@ -7,25 +7,18 @@
     <meta name="author" content="">
     <title>Drop Menu Demo 2</title>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.1.min.js"></script>
-    <!-- script type="text/javascript" src="./zepto/zepto.js"></script>
-    <script type="text/javascript" src="./foundation/js/foundation/foundation.js"></script>
-    <script type="text/javascript" src="./foundation/js/foundation/foundation.topbar.js"></script>
-    <script type="text/javascript" src="./foundation/js/foundation/foundation.dropdown.js"></script -->
-    <link href="//cdn.jsdelivr.net/foundation/4.2.3/css/foundation.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/foundation/4.2.3/css/foundation.min.css" />
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/foundation/4.2.3/js/vendor/custom.modernizr.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/foundation/4.2.3/js/vendor/zepto.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/foundation/4.2.3/js/foundation.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/foundation/4.2.3/js/foundation/foundation.topbar.js"></script>
 
     <script type="text/javascript" src="./nf-dropdownmenu.js"></script>
     <script>
       $(document).ready(function () {
-        /* foundation hack: do not use */
-        $('nav.top-bar li.toggle-topbar a').click(function () {
-          if($('nav.top-bar').hasClass('expanded')){
-            $('nav.top-bar').removeClass('expanded');
-          }
-          else{
-            $('nav.top-bar').addClass('expanded');
-          }
-        });
+        $(document).foundation();
 
         $('nav.top-bar').nfDropdownMenu({
           button: '.toggle-topbar a',
