@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Drop Menu Demo 2</title>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+    <!-- script type="text/javascript" src="./zepto/zepto.js"></script>
+    <script type="text/javascript" src="./foundation/js/foundation/foundation.js"></script>
+    <script type="text/javascript" src="./foundation/js/foundation/foundation.topbar.js"></script>
+    <script type="text/javascript" src="./foundation/js/foundation/foundation.dropdown.js"></script -->
+    <link href="./foundation/css/foundation.css" rel="stylesheet">
+
+    <script type="text/javascript" src="./nf-dropdownmenu.js"></script>
+    <script>
+      $(document).ready(function () {
+        /* foundation hack: do not use */
+        $('nav.top-bar li.toggle-topbar a').click(function () {
+          if($('nav.top-bar').hasClass('expanded')){
+            $('nav.top-bar').removeClass('expanded');
+          }
+          else{
+            $('nav.top-bar').addClass('expanded');
+          }
+        });
+
+        $('nav.top-bar').nfDropdownMenu({
+          button: '.toggle-topbar a',
+          list: '.top-bar-section',
+          content: '#post-content'
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="row">
+      <h3> News Front (foundation)</h3>
+
+      <nav class="top-bar">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="/">News</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+        <section class="top-bar-section">
+          <ul class="right">
+            <li class="divider"></li>
+            <li class=""><a href="./index.html">Europe</a></li>
+            <li class=""><a href="./scaffolding.html">Africa</a></li>
+            <li class=""><a href="./base-css.html">Asia</a></li>
+            <li class=""><a href="./components.html">US & Canada</a></li>
+            <li class="divider"></li>
+            <li class=""><a href="./download.html">Business</a></li>
+            <li class=""><a href="./examples.html">Sport</a>
+            <li class=""><a href="./download.html">Entertainment</a></li>
+            <li class=""><a href="./examples.html">Technology</a>
+            <li class="divider"></li>
+            <li class=""><a href="./download.html">Video</a></li>
+            <li class=""><a href="./examples.html">Other News</a>
+          </ul>
+        </section>
+      </nav>
+
+      <div id="post-content">
+        <h3>Det gode liv i Liverpool</h3>
+        <p>Eksos, kull, fattigdom og triste blikk. Mytene er mange, men akk så misvisende. Det er ikke mange byer i verden som har forandret seg så radikalt og raskt som Liverpool.
+
+          I dag glitrer Mersey i solskinnet, heisekranene har pakket sammen, industripipene hviler. Men ølet skummer og sangen runger fortsatt. Vi kan kjenne at vi og byen lever.
+
+          Liverpool er revitalisert, noe den blant annet kan takke statusen som Europeisk kulturby 2008 for. Det var en brekkstang for mange nye prosjekter. I dag fremstår Liverpool som en pulserende partyby, moderne glassbygg stirrer steilt mot himmelen - side om side med ærverdige gamle teglsteinsfasader fra en annen storhetstid. Kontrastene er enorme.</p>
+      </div>
+
+      <hr>
+      <small>This is the footer | Powered by Frontkom!</small>
+    </div>
+  <body>
+</html>
