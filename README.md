@@ -36,6 +36,7 @@ $('nav.top-bar').nfDropdownMenu({
 
 [http://front.github.io/nf-dropdownmenu/](http://front.github.io/nf-dropdownmenu/)
 
+
 ##### foundation
 
 [http://front.github.io/nf-dropdownmenu/foundation.html](http://front.github.io/nf-dropdownmenu/foundation.html)
@@ -46,8 +47,16 @@ $('nav.top-bar').nfDropdownMenu({
 
 [http://twitter.github.io/bootstrap/](http://twitter.github.io/bootstrap/)
 
+LICENSE: [https://github.com/twitter/bootstrap/blob/master/LICENSE](https://github.com/twitter/bootstrap/blob/master/LICENSE)
+
 `OR`
 
 #### foundation
 
 [http://foundation.zurb.com/](http://foundation.zurb.com/)
+
+LICENSE: [https://github.com/zurb/foundation/blob/master/LICENSE](https://github.com/zurb/foundation/blob/master/LICENSE)
+
+## License
+
+[MIT](https://github.com/front/nf-dropdownmenu/blob/master/LICENSE)
