@@ -5,58 +5,141 @@
     <meta name="viewport" content="width=device-width, user-scalable=no" />
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Drop Menu Demo</title>
-
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-
+    <title>Dropdown Menu</title>
+    <link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/foundation/4.2.3/css/foundation.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/styles.css" />
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="./nf-dropdownmenu.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('.navbar').nfDropdownMenu('#post-content');
-    });
-  </script>
-
+    <script>
+      $(document).ready(function () {
+        $('#nf-menu-top').menuToggle();
+        $('#nf-menu-main').menuToggle('#post-content');
+        $('#nf-menu-main-blue').menuToggle();
+      });
+    </script>
+    <style type="text/css">
+      body {
+        background-color: #eee;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <h3> News Front</h3>
-      </div>
-    </header>
+    <div class="row">
 
-    <div class="container">
+      <nav id="nf-menu-top" class="nf-menu nf-white nf-small">
+        <section class="nf-brand"><a href="/">Newsfront</a></section>
+        <section class="nf-toggle-sub" data-toggle=".nf-section-sub"><a href="#">Meny</a></section>
+        <section class="nf-toggle-main" data-toggle=".nf-section-main"><a href="#">Seksjoner</a></section>
+        <section class="nf-section-keep">
+          <ul>
+            <li class=""><a href="/abonner/" class="">Abonnér</a></li>
+            <li class="divider"></li>
+            <li class=""><a href="/s/" class="">Søk</a></li>
+            <li class="divider"></li>
+          </ul>
+        </section>
+        <section class="nf-section-main">
+          <ul>
+            <li><a href="/meninger/">Meninger</a></li>
+            <li class="divider"></li>
+            <li><a href="/kultur/">Kultur</a></li>
+            <li class="divider"></li>
+          </ul>
+        </section>
+        <section class="nf-section-sub">
+          <ul>
+            <li><a href="#">Forside</a></li>
+            <li><a href="#">Nyheter</a></li>
+            <li class="divider"></li>
+            <li><a href="#">TV guide</a></li>
+            <li><a href="#">Spill</a></li>
+            <li><a href="#">Eiendom</a></li>
+            <li><a href="#">Jobbmarked</a></li>
+            <li><a href="#">Bildeserier</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Reise</a></li>
+            <li><a href="#">Om oss</a></li>
+            <li><a href="#">A-Å</a></li>
+          </ul>
+        </section>
+      </nav>
 
-      <div class="navbar navbar-inverse">
-        <div class="navbar-inner">
-          <div class="container">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="brand" href="./index.html">News</a>
-            <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li class=""><a href="./index.html">Europe</a></li>
-                <li class=""><a href="./scaffolding.html">Africa</a></li>
-                <li class=""><a href="./base-css.html">Asia</a></li>
-                <li class=""><a href="./components.html">US &amp; Canada</a></li>
-                <li class="divider-vertical"></li>
-                <li class=""><a href="./download.html">Business</a></li>
-                <li class=""><a href="./examples.html">Sport</a>
-                <li class=""><a href="./download.html">Entertainment</a></li>
-                <li class=""><a href="./examples.html">Technology</a>
-                <li class="divider-vertical"></li>
-                <li class=""><a href="./download.html">Video</a></li>
-                <li class=""><a href="./examples.html">Other News</a>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+      <br/><br/>
+      <nav id="nf-menu-main" class="nf-menu nf-red nf-large">
+        <section class="nf-brand"><a href="/"></a></section>
+        <section class="nf-toggle-sub" data-toggle=".nf-section-sub"><a href="#">Meny</a></section>
+        <section class="nf-toggle-main" data-toggle=".nf-section-main"><a href="#">Seksjoner</a></section>
+        <section class="nf-section-main">
+          <ul>
+            <li class=""><a href="#">Nyheter</a></li>
+              <li class="divider"></li>
+              <li class=""><a href="#">Nærmiljøet</a></li>
+              <li class=""><a href="#">Fylket</a></li>
+              <li class=""><a href="#">Hele landet</a></li>
+              <li class="divider"></li>
+              <li class=""><a href="#">Næringsliv</a></li>
+              <li class=""><a href="#">Underholdning &amp; kunst</a>
+              <li class=""><a href="#">Helse</a></li>
+              <li class="divider"></li>
+              <li class=""><a href="#">Også fra nyhetsbildet</a></li>
+              <li class="divider"></li>
+          </ul>
+        </section>
+        <section class="nf-section-sub">
+          <ul>
+            <li><a href="#">Forside</a></li>
+            <li><a href="#">Nyheter</a></li>
+            <li><a href="#">TV guide</a></li>
+            <li><a href="#">Spill</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Eiendom</a></li>
+            <li><a href="#">Jobbmarked</a></li>
+            <li><a href="#">Bildeserier</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Reise</a></li>
+            <li><a href="#">Om oss</a></li>
+            <li><a href="#">A-Å</a></li>
+          </ul>
+        </section>
+      </nav>
 
+      <br/><br/>
+      <nav id="nf-menu-main-blue" class="nf-menu nf-blue nf-medium">
+        <section class="nf-brand"><a href="/">Newsblu</a></section>
+        <section class="nf-toggle-sub" data-toggle=".nf-section-sub"><a href="#">Meny</a></section>
+        <section class="nf-toggle-main" data-toggle=".nf-section-main"><a href="#">Seksjoner</a></section>
+        <section class="nf-section-main">
+          <ul>
+            <li class=""><a href="#">Nyheter</a></li>
+              <li class="divider"></li>
+              <li class=""><a href="#">Nærmiljøet</a></li>
+              <li class=""><a href="#">Fylket</a></li>
+              <li class=""><a href="#">Hele landet</a></li>
+              <li class="divider"></li>
+              <li class=""><a href="#">Helse</a></li>
+              <li class=""><a href="#">Også fra nyhetsbildet</a></li>
+              <li class="divider"></li>
+          </ul>
+        </section>
+        <section class="nf-section-sub">
+          <ul>
+            <li><a href="#">Forside</a></li>
+            <li><a href="#">Nyheter</a></li>
+            <li><a href="#">TV guide</a></li>
+            <li><a href="#">Spill</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Eiendom</a></li>
+            <li><a href="#">Jobbmarked</a></li>
+            <li><a href="#">Bildeserier</a></li>
+            <li><a href="#">Reise</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Om oss</a></li>
+            <li><a href="#">A-Å</a></li>
+          </ul>
+        </section>
+      </nav>
+
+       <br/><br/>
       <div id="post-content">
         <h3>Det gode liv i Liverpool</h3>
         <p>Eksos, kull, fattigdom og triste blikk. Mytene er mange, men akk så misvisende. Det er ikke mange byer i verden som har forandret seg så radikalt og raskt som Liverpool.
@@ -65,13 +148,8 @@
 
           Liverpool er revitalisert, noe den blant annet kan takke statusen som Europeisk kulturby 2008 for. Det var en brekkstang for mange nye prosjekter. I dag fremstår Liverpool som en pulserende partyby, moderne glassbygg stirrer steilt mot himmelen - side om side med ærverdige gamle teglsteinsfasader fra en annen storhetstid. Kontrastene er enorme.</p>
       </div>
-
-      <footer>
-        <div class="container">
-          <hr>
-          <small>This is the footer | Powered by Frontkom!</small>
-        </div>
-      </footer>
+      <hr>
+      <small>This is the footer | Powered by Frontkom!</small>
     </div>
   <body>
 </html>
