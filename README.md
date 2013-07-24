@@ -48,7 +48,7 @@ The menu is divided into **6 sections** (all optional).
  * `nf-brand` - the title and the main link on the menu.
  * `nf-toggle-main` - main list toggle button. Show/hides items on the `nf-section-main` section. It's only shown when the main list is collapsed.
  * `nf-toggle-sub` - secondary list toggle button (allways visible). Shows/hides the `nf-section-sub` section.
- 
+
  * `nf-section-main` - main list of items on the menu. This section is collapse depending on the viewport width and declared size on the menu (view below).
  * `nf-section-keep` - list of items that are always visible on screen.
  * `nf-section-sub` - secondary list of items. This section is allways collapsed.
@@ -61,17 +61,18 @@ $('#nf-menu-top').menuToggle(content);
 ```
 
  * `content` - optional, content to be hidden when the mnu is open.
- 
+
 ### Options
- 
+
 #### Declared Size
 
 Determines when the main menu list (`nf-section-main`) is collapsed.
- 
+
  * `nf-small` - small number of items. Collapses the main list at 480px.
  * `nf-medium` - medium number of items. Collapses the main list at 768px.
- * `nf-alrge` - large number of items. Collapses the main list at 960px.
- 
+ * `nf-large` - large number of items. Collapses the main list at 960px.
+
+These options be changed editing the Sass file.
 
 #### Styling
 
@@ -81,7 +82,7 @@ Basic theming for the menu.
  * `nf-red` - a red based theme.
  * `nf-blue` - a blue based theme.
 
-Styles can also be edited using the Sass file.
+These can be changed editing the Sass file.
 
 ## Demo
 
