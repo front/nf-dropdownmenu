@@ -1,23 +1,28 @@
 // Layout
-$nf-topbar-height: 42px;
+$nf-menu-font-size:    14px !default;
+$nf-menu-height:       42px !default;
+$nf-menu-link-padding: 11px 8px !default;
 
-@mixin nf-menu-wide {
-  float: right;
+@mixin nf-menu-wide($float: right) {
+  float: $float;
+
   ul {
     position: relative;
-    height: $nf-topbar-height;
+    height: $nf-menu-height;
+
     li {
       list-style: none;
       display: inline-block;
-      height: $nf-topbar-height;
+      height: $nf-menu-height;
+
       &.divider {
         width: 1px;
         background: none;
       }
       a {
         display: table-cell;
-        height: $nf-topbar-height;
-        padding: 11px 8px;
+        height: $nf-menu-height;
+        padding: $nf-menu-link-padding;
       }
     }
   }
@@ -28,16 +33,19 @@ $nf-topbar-height: 42px;
   float: none;
   clear: both;
   height: auto;
+
   ul {
     display: block;
     position: relative;
     width: 100%;
     height: auto;
     padding: 10px 0;
+
     li {
       display: inline-block;
       width: 31%;
       height: auto;
+
       &.divider {
         display: none;
       }
@@ -46,6 +54,7 @@ $nf-topbar-height: 42px;
         padding: 6px 0 6px 16px;
         font-size: 15px;
         font-weight: 400;
+
         &:hover {
           text-decoration: underline;
         }
@@ -84,40 +93,51 @@ $nf-topbar-height: 42px;
   }
 }
 
-// Theming
-////// MENU: WHITE
-@mixin topbar-global-white {
-  background-color: #fff;
+// THEMING
+@mixin topbar-global($bg: #FFF, $color: #777, $tbg: #DDD, $tcolor: #111, $bc: #CCC, $sub: false) {
+  background-color: $bg;
+
   a {
-    color: #777;
-    font-weight: bold;
+    color: $color;
     font-size: 15px;
+    font-weight: bold;
     cursor: pointer;
   }
   .nf-brand a {
-    color: #777;
+    color: $color;
     font-size: 17px;
     font-weight: 900;
   }
   .nf-toggle-main a {
-    background: #ddd;
-    color: #111;
+    background: $tbg;
+    color: $tcolor;
     font-weight: bold;
   }
   .nf-section-keep {
     @include nf-menu-wide;
-    ul li {
-      &.divider {
-        border-left: 1px solid #ccc;
+
+    li.divider {
+      border-left: 1px solid $bc;
+    }
+  }
+  @if $sub == true {
+    .nf-toggle-sub {
+      a {
+        background: image-url('icons-sprite.png') no-repeat right -396px;
+        padding-right: 30px;
+        font-weight: bold;
+      }
+      &.nf-open a {
+        background: image-url('icons-sprite.png') no-repeat right -297px;
       }
     }
   }
 }
-@mixin topbar-theme-white-wide {
-  @include topbar-global-white;
+@mixin topbar-size-wide {
   .nf-section-main {
     @include nf-menu-wide;
-    ul li {
+
+    li {
       &.divider {
         border-left: 1px solid #ccc;
       }
@@ -137,8 +157,7 @@ $nf-topbar-height: 42px;
     }
   }
 }
-@mixin topbar-theme-white-medium {
-  @include topbar-global-white;
+@mixin topbar-size-medium {
   .nf-toggle-main {
     display: block;
   }
@@ -161,8 +180,7 @@ $nf-topbar-height: 42px;
     }
   }
 }
-@mixin topbar-theme-white-compact {
-  @include topbar-global-white;
+@mixin topbar-size-compact {
   .nf-section-main, .nf-section-sub {
     @include nf-menu-compact;
     ul {
@@ -408,23 +426,18 @@ $nf-topbar-height: 42px;
 
 ////// NF-MAINBAR Global Style
 .nf-menu {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
   -webkit-font-smoothing: antialiased;
 
   position: relative;
   clear: both;
-  font-size: 14px;
-  min-height: $nf-topbar-height;
-  * {
-    margin: 0;
-    padding: 0;
-  }
+  font-size: $nf-menu-font-size;
+  min-height: $nf-menu-height;
+
   .nf-brand {
     float: left;
     padding: 15px;
-    height: $nf-topbar-height;
+    height: $nf-menu-height;
   }
   .nf-toggle-main {
     float: right;
@@ -432,7 +445,7 @@ $nf-topbar-height: 42px;
     a {
       display: block;
       padding: 15px;
-      height: $nf-topbar-height;
+      height: $nf-menu-height;
     }
     @media (max-width:480px) {
       display: block;
@@ -445,105 +458,54 @@ $nf-topbar-height: 42px;
     float: right;
     display: inline-block;
     a {
-      height: $nf-topbar-height;
+      height: $nf-menu-height;
       display: block;
       padding: 15px;
     }
   }
-  &.nf-small {
-    &.nf-white {
-      @media (max-width:480px) {
-        @include topbar-theme-white-compact;
-      }
-      @media (min-width:481px) {
-        @include topbar-theme-white-wide;
-      }
-    }
-    &.nf-red {
-      @media (max-width:480px) {
-        @include topbar-theme-red-compact;
-      }
-      @media (min-width:481px) {
-        @include topbar-theme-red-wide;
-      }
-    }
-    &.nf-blue {
-      @media (max-width:480px) {
-        @include topbar-theme-blue-compact;
-      }
-      @media (min-width:481px) {
-        @include topbar-theme-blue-wide;
-      }
-    }
+}
+
+// NF Menu sizes
+.nf-menu--small {
+  @media (max-width:480px) {
+    @include topbar-size-compact;
   }
-  &.nf-medium {
-    &.nf-white {
-      @media (max-width:480px) {
-        @include topbar-theme-white-compact;
-      }
-      @media (min-width:481px) and (max-width: 768px){
-        @include topbar-theme-white-medium;
-      }
-      @media (min-width:769px) {
-        @include topbar-theme-white-wide;
-      }
-    }
-    &.nf-red {
-      @media (max-width:480px) {
-        @include topbar-theme-red-compact;
-      }
-      @media (min-width:481px) and (max-width: 768px){
-        @include topbar-theme-red-medium;
-      }
-      @media (min-width:769px) {
-        @include topbar-theme-red-wide;
-      }
-    }
-    &.nf-blue {
-      @media (max-width:480px) {
-        @include topbar-theme-blue-compact;
-      }
-      @media (min-width:481px) and (max-width: 768px){
-        @include topbar-theme-blue-medium;
-      }
-      @media (min-width:769px) {
-        @include topbar-theme-blue-wide;
-      }
-    }
+  @media (min-width:481px) {
+    @include topbar-size-wide;
   }
-  &.nf-large {
-    &.nf-white {
-      @media (max-width:480px) {
-        @include topbar-theme-white-compact;
-      }
-      @media (min-width:481px) and (max-width: 960px){
-        @include topbar-theme-white-medium;
-      }
-      @media (min-width:961px) {
-        @include topbar-theme-white-wide;
-      }
-    }
-    &.nf-red {
-      @media (max-width:480px) {
-        @include topbar-theme-red-compact;
-      }
-      @media (min-width:481px) and (max-width: 960px){
-        @include topbar-theme-red-medium;
-      }
-      @media (min-width:961px) {
-        @include topbar-theme-red-wide;
-      }
-    }
-    &.nf-blue {
-      @media (max-width:480px) {
-        @include topbar-theme-blue-compact;
-      }
-      @media (min-width:481px) and (max-width: 960px){
-        @include topbar-theme-blue-medium;
-      }
-      @media (min-width:961px) {
-        @include topbar-theme-blue-wide;
-      }
-    }
+}
+
+.nf-menu--medium {
+  @media (max-width:480px) {
+    @include topbar-size-compact;
   }
+  @media (min-width:481px) and (max-width: 768px) {
+    @include topbar-size-medium;
+  }
+  @media (min-width:769px) {
+    @include topbar-size-wide;
+  }
+}
+
+.nf-menu--large {
+  @media (max-width:480px) {
+    @include topbar-size-compact;
+  }
+  @media (min-width:481px) and (max-width: 960px) {
+    @include topbar-size-medium;
+  }
+  @media (min-width:961px) {
+    @include topbar-size-wide;
+  }
+}
+
+// NF Menu colors
+.nf-menu--white {
+  @include topbar-global;
+}
+.nf-menu--red {
+  @include topbar-global-red;
+}
+.nf-menu--blue {
+  @include topbar-global-blue;
 }
