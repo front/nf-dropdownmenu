@@ -1,23 +1,22 @@
-/*
- * Layout
- */
-$nfTopbarHeight: 42px;
+// Layout
+$nf-topbar-height: 42px;
+
 @mixin nf-menu-wide {
   float: right;
   ul {
     position: relative;
-    height: $nfTopbarHeight;
+    height: $nf-topbar-height;
     li {
       list-style: none;
       display: inline-block;
-      height: $nfTopbarHeight;
+      height: $nf-topbar-height;
       &.divider {
         width: 1px;
         background: none;
       }
       a {
         display: table-cell;
-        height: $nfTopbarHeight;
+        height: $nf-topbar-height;
         padding: 11px 8px;
       }
     }
@@ -84,10 +83,9 @@ $nfTopbarHeight: 42px;
     }
   }
 }
-/*
- * Theming
- */
-/************** MENU: WHITE **************/
+
+// Theming
+////// MENU: WHITE
 @mixin topbar-global-white {
   background-color: #fff;
   a {
@@ -191,7 +189,8 @@ $nfTopbarHeight: 42px;
     }
   }
 }
-/************** MENU: RED **************/
+
+////// MENU: RED
 @mixin topbar-global-red {
   background-color: #c00;
   a {
@@ -304,7 +303,8 @@ $nfTopbarHeight: 42px;
     }
   }
 }
-/************** MENU: BLUE **************/
+
+////// MENU: BLUE
 @mixin topbar-global-blue {
   background-color: #1191d2;
   a {
@@ -405,9 +405,8 @@ $nfTopbarHeight: 42px;
     }
   }
 }
-/*
- * NF-MAINBAR Global Style
- */
+
+////// NF-MAINBAR Global Style
 .nf-menu {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -417,7 +416,7 @@ $nfTopbarHeight: 42px;
   position: relative;
   clear: both;
   font-size: 14px;
-  min-height: $nfTopbarHeight;
+  min-height: $nf-topbar-height;
   * {
     margin: 0;
     padding: 0;
@@ -425,7 +424,7 @@ $nfTopbarHeight: 42px;
   .nf-brand {
     float: left;
     padding: 15px;
-    height: $nfTopbarHeight;
+    height: $nf-topbar-height;
   }
   .nf-toggle-main {
     float: right;
@@ -433,7 +432,7 @@ $nfTopbarHeight: 42px;
     a {
       display: block;
       padding: 15px;
-      height: $nfTopbarHeight;
+      height: $nf-topbar-height;
     }
     @media (max-width:480px) {
       display: block;
@@ -446,7 +445,7 @@ $nfTopbarHeight: 42px;
     float: right;
     display: inline-block;
     a {
-      height: $nfTopbarHeight;
+      height: $nf-topbar-height;
       display: block;
       padding: 15px;
     }

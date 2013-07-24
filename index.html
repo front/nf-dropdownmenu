@@ -1,13 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Dropdown Menu</title>
-    <link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/foundation/4.2.3/css/foundation.min.css" />
-    <link type="text/css" rel="stylesheet" href="css/styles.css" />
+
+    <link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/foundation/4.2.3/css/foundation.min.css">
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+    <style type="text/css">
+      body {
+        background-color: #eee;
+      }
+    </style>
+
     <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="./nf-dropdownmenu.js"></script>
     <script>
@@ -17,19 +23,21 @@
         $('#nf-menu-main-blue').menuToggle();
       });
     </script>
-    <style type="text/css">
-      body {
-        background-color: #eee;
-      }
-    </style>
   </head>
   <body>
     <div class="row">
 
       <nav id="nf-menu-top" class="nf-menu nf-white nf-small">
-        <section class="nf-brand"><a href="/">Newsfront</a></section>
-        <section class="nf-toggle-sub" data-toggle=".nf-section-sub"><a href="#">Meny</a></section>
-        <section class="nf-toggle-main" data-toggle=".nf-section-main"><a href="#">Seksjoner</a></section>
+        <h2 class="nf-brand"><a href="/">Newsfront</a></h2>
+
+        <section class="nf-toggle-sub" data-toggle=".nf-section-sub">
+          <a href="#">Meny</a>
+        </section>
+
+        <section class="nf-toggle-main" data-toggle=".nf-section-main">
+          <a href="#">Seksjoner</a>
+        </section>
+
         <section class="nf-section-keep">
           <ul>
             <li class=""><a href="/abonner/" class="">Abonnér</a></li>
@@ -38,6 +46,7 @@
             <li class="divider"></li>
           </ul>
         </section>
+
         <section class="nf-section-main">
           <ul>
             <li><a href="/meninger/">Meninger</a></li>
@@ -46,6 +55,7 @@
             <li class="divider"></li>
           </ul>
         </section>
+
         <section class="nf-section-sub">
           <ul>
             <li><a href="#">Forside</a></li>
@@ -64,7 +74,8 @@
         </section>
       </nav>
 
-      <br/><br/>
+      <br><br>
+
       <nav id="nf-menu-main" class="nf-menu nf-red nf-large">
         <section class="nf-brand"><a href="/"></a></section>
         <section class="nf-toggle-sub" data-toggle=".nf-section-sub"><a href="#">Meny</a></section>
@@ -103,7 +114,8 @@
         </section>
       </nav>
 
-      <br/><br/>
+      <br><br>
+
       <nav id="nf-menu-main-blue" class="nf-menu nf-blue nf-medium">
         <section class="nf-brand"><a href="/">Newsblu</a></section>
         <section class="nf-toggle-sub" data-toggle=".nf-section-sub"><a href="#">Meny</a></section>
@@ -139,7 +151,8 @@
         </section>
       </nav>
 
-       <br/><br/>
+      <br><br>
+
       <div id="post-content">
         <h3>Det gode liv i Liverpool</h3>
         <p>Eksos, kull, fattigdom og triste blikk. Mytene er mange, men akk så misvisende. Det er ikke mange byer i verden som har forandret seg så radikalt og raskt som Liverpool.
