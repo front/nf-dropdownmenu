@@ -46,6 +46,7 @@ $nf-menu-line-height: $nf-menu-height - ($nf-menu-link-pad-v * 2) !default;
     position: relative;
     width: 100%;
     height: auto;
+    margin-bottom: 0;
     padding: $nf-menu-link-pad-v 0;
   }
   li {
@@ -83,6 +84,7 @@ $nf-menu-line-height: $nf-menu-height - ($nf-menu-link-pad-v * 2) !default;
     position: relative;
     width: 100%;
     height: auto;
+    margin-bottom: 0;
   }
   li {
     display: block;
@@ -164,7 +166,7 @@ $nf-menu-line-height: $nf-menu-height - ($nf-menu-link-pad-v * 2) !default;
     a {
       border-left: 1px solid $sub-border-top-color;
       color: $sub-color;
-      font-weight: normal;
+      font-weight: 700;
     }
   }
 }
@@ -208,11 +210,12 @@ $nf-menu-line-height: $nf-menu-height - ($nf-menu-link-pad-v * 2) !default;
     li.divider {
       display: block;
       border-top: 6px solid $dbc;
+      border-left: none !important;
     }
-    a {
+    li a {
       padding: 12px 8px;
       border-bottom: 1px solid $dbc;
-      border-left: none;
+      border-left: none !important;
 
       background: $bg image-url('icons-sprite.png') no-repeat right -197px;
       color: $color;

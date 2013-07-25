@@ -49,6 +49,7 @@
     position: relative;
     width: 100%;
     height: auto;
+    margin-bottom: 0;
   }
   .nf-section-main li, .nf-section-sub li {
     display: block;
@@ -71,11 +72,12 @@
   .nf-section-main li.divider, .nf-section-sub li.divider {
     display: block;
     border-top: 6px solid gainsboro;
+    border-left: none !important;
   }
-  .nf-section-main a, .nf-section-sub a {
+  .nf-section-main li a, .nf-section-sub li a {
     padding: 12px 8px;
     border-bottom: 1px solid gainsboro;
-    border-left: none;
+    border-left: none !important;
     background: white url('../img/icons-sprite.png?1374683570') no-repeat right -197px;
     color: #1e1e1e;
     font-size: 16px;
@@ -140,6 +142,7 @@
     position: relative;
     width: 100%;
     height: auto;
+    margin-bottom: 0;
     padding: 11px 0;
   }
   .nf-menu--small .nf-section-sub li {
@@ -182,6 +185,7 @@
     position: relative;
     width: 100%;
     height: auto;
+    margin-bottom: 0;
     padding: 11px 0;
   }
   .nf-menu--medium .nf-section-main li, .nf-menu--medium .nf-section-sub li {
@@ -273,6 +277,7 @@
     position: relative;
     width: 100%;
     height: auto;
+    margin-bottom: 0;
     padding: 11px 0;
   }
   .nf-menu--medium .nf-section-sub li {
@@ -315,6 +320,7 @@
     position: relative;
     width: 100%;
     height: auto;
+    margin-bottom: 0;
     padding: 11px 0;
   }
   .nf-menu--large .nf-section-main li, .nf-menu--large .nf-section-sub li {
@@ -406,6 +412,7 @@
     position: relative;
     width: 100%;
     height: auto;
+    margin-bottom: 0;
     padding: 11px 0;
   }
   .nf-menu--large .nf-section-sub li {
@@ -518,7 +525,7 @@
 .nf-menu--white .nf-section-sub a {
   border-left: 1px solid #cccccc;
   color: #666666;
-  font-weight: normal;
+  font-weight: 700;
 }
 
 .nf-menu--red {
@@ -607,7 +614,7 @@
 .nf-menu--red .nf-section-sub a {
   border-left: 1px solid #aa0000;
   color: #333333;
-  font-weight: normal;
+  font-weight: 700;
 }
 
 .nf-menu--blue {
@@ -696,5 +703,5 @@
 .nf-menu--blue .nf-section-sub a {
   border-left: 1px solid #1191d2;
   color: #333333;
-  font-weight: normal;
+  font-weight: 700;
 }
