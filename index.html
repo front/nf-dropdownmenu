@@ -27,42 +27,82 @@
   <body>
     <div class="row">
 
-      <nav id="nf-menu-top" class="nf-menu nf-menu--white nf-menu--small">
+      <nav id="nf-menu-top" class="nf-menu nf-menu--small nf-menu--white">
         <h2 class="nf-brand"><a href="/">Newsfront</a></h2>
 
-        <span class="nf-toggle-sub" data-toggle=".nf-section-sub">
-          <a href="#">Meny</a>
-        </span>
+        <span class="nf-toggle-sub" data-toggle=".nf-section-sub"><a href="#">Meny</a></span>
 
-        <span class="nf-toggle-main" data-toggle=".nf-section-main">
-          <a href="#">Seksjoner</a>
-        </span>
+        <span class="nf-toggle-main" data-toggle=".nf-section-main"><a href="#">Seksjoner</a></span>
 
-        <section class="nf-section-keep">
+        <div class="nf-section-keep">
           <ul>
             <li class=""><a href="/abonner/" class="">Abonnér</a></li>
             <li class="divider"></li>
             <li class=""><a href="/s/" class="">Søk</a></li>
             <li class="divider"></li>
           </ul>
-        </section>
+        </div>
 
-        <section class="nf-section-main">
+        <div class="nf-section-main">
           <ul>
             <li><a href="/meninger/">Meninger</a></li>
             <li class="divider"></li>
             <li><a href="/kultur/">Kultur</a></li>
             <li class="divider"></li>
           </ul>
-        </section>
+        </div>
 
-        <section class="nf-section-sub">
+        <div class="nf-section-sub">
           <ul>
             <li><a href="#">Forside</a></li>
             <li><a href="#">Nyheter</a></li>
             <li class="divider"></li>
             <li><a href="#">TV guide</a></li>
             <li><a href="#">Spill</a></li>
+            <li><a href="#">Eiendom</a></li>
+            <li><a href="#">Jobbmarked</a></li>
+            <li><a href="#">Bildeserier</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Reise</a></li>
+            <li><a href="#">Om oss</a></li>
+            <li><a href="#">A-Å</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <hr>
+
+      <nav id="nf-menu-main" class="nf-menu nf-menu--large nf-menu--red">
+        <h2 class="nf-brand"><a href="/"></a></h2>
+
+        <span class="nf-toggle-sub" data-toggle=".nf-section-sub"><a href="#">Meny<i class="nf-toggle-icon"></i></a></span>
+
+        <span class="nf-toggle-main" data-toggle=".nf-section-main"><a href="#">Seksjoner</a></span>
+
+        <section class="nf-section-main">
+          <ul>
+            <li class=""><a href="#">Nyheter</a></li>
+            <li class="divider"></li>
+            <li class=""><a href="#">Nærmiljøet</a></li>
+            <li class=""><a href="#">Fylket</a></li>
+            <li class=""><a href="#">Hele landet</a></li>
+            <li class="divider"></li>
+            <li class=""><a href="#">Næringsliv</a></li>
+            <li class=""><a href="#">Underholdning &amp; kunst</a>
+            <li class=""><a href="#">Helse</a></li>
+            <li class="divider"></li>
+            <li class=""><a href="#">Også fra nyhetsbildet</a></li>
+            <li class="divider"></li>
+          </ul>
+        </section>
+
+        <section class="nf-section-sub">
+          <ul>
+            <li><a href="#">Forside</a></li>
+            <li><a href="#">Nyheter</a></li>
+            <li><a href="#">TV guide</a></li>
+            <li><a href="#">Spill</a></li>
+            <li class="divider"></li>
             <li><a href="#">Eiendom</a></li>
             <li><a href="#">Jobbmarked</a></li>
             <li><a href="#">Bildeserier</a></li>
@@ -76,11 +116,14 @@
 
       <hr>
 
-      <nav id="nf-menu-main" class="nf-menu nf-menu--red nf-menu--large">
-        <section class="nf-brand"><a href="/"></a></section>
-        <section class="nf-toggle-sub" data-toggle=".nf-section-sub"><a href="#">Meny</a></section>
-        <section class="nf-toggle-main" data-toggle=".nf-section-main"><a href="#">Seksjoner</a></section>
-        <section class="nf-section-main">
+      <nav id="nf-menu-main-blue" class="nf-menu nf-menu--medium nf-menu--blue">
+        <h2 class="nf-brand"><a href="/">Newsblu</a></h2>
+
+        <span class="nf-toggle-sub" data-toggle=".nf-section-sub"><a href="#">Meny</a></span>
+
+        <span class="nf-toggle-main" data-toggle=".nf-section-main"><a href="#">Seksjoner</a></span>
+
+        <div class="nf-section-main">
           <ul>
             <li class=""><a href="#">Nyheter</a></li>
               <li class="divider"></li>
@@ -88,15 +131,13 @@
               <li class=""><a href="#">Fylket</a></li>
               <li class=""><a href="#">Hele landet</a></li>
               <li class="divider"></li>
-              <li class=""><a href="#">Næringsliv</a></li>
-              <li class=""><a href="#">Underholdning &amp; kunst</a>
               <li class=""><a href="#">Helse</a></li>
-              <li class="divider"></li>
               <li class=""><a href="#">Også fra nyhetsbildet</a></li>
               <li class="divider"></li>
           </ul>
-        </section>
-        <section class="nf-section-sub">
+        </div>
+
+        <div class="nf-section-sub">
           <ul>
             <li><a href="#">Forside</a></li>
             <li><a href="#">Nyheter</a></li>
@@ -106,52 +147,15 @@
             <li><a href="#">Eiendom</a></li>
             <li><a href="#">Jobbmarked</a></li>
             <li><a href="#">Bildeserier</a></li>
-            <li class="divider"></li>
             <li><a href="#">Reise</a></li>
+            <li class="divider"></li>
             <li><a href="#">Om oss</a></li>
             <li><a href="#">A-Å</a></li>
           </ul>
-        </section>
+        </div>
       </nav>
 
       <hr>
-
-      <nav id="nf-menu-main-blue" class="nf-menu nf-menu--blue nf-menu--medium">
-        <section class="nf-brand"><a href="/">Newsblu</a></section>
-        <section class="nf-toggle-sub" data-toggle=".nf-section-sub"><a href="#">Meny</a></section>
-        <section class="nf-toggle-main" data-toggle=".nf-section-main"><a href="#">Seksjoner</a></section>
-        <section class="nf-section-main">
-          <ul>
-            <li class=""><a href="#">Nyheter</a></li>
-              <li class="divider"></li>
-              <li class=""><a href="#">Nærmiljøet</a></li>
-              <li class=""><a href="#">Fylket</a></li>
-              <li class=""><a href="#">Hele landet</a></li>
-              <li class="divider"></li>
-              <li class=""><a href="#">Helse</a></li>
-              <li class=""><a href="#">Også fra nyhetsbildet</a></li>
-              <li class="divider"></li>
-          </ul>
-        </section>
-        <section class="nf-section-sub">
-          <ul>
-            <li><a href="#">Forside</a></li>
-            <li><a href="#">Nyheter</a></li>
-            <li><a href="#">TV guide</a></li>
-            <li><a href="#">Spill</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Eiendom</a></li>
-            <li><a href="#">Jobbmarked</a></li>
-            <li><a href="#">Bildeserier</a></li>
-            <li><a href="#">Reise</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Om oss</a></li>
-            <li><a href="#">A-Å</a></li>
-          </ul>
-        </section>
-      </nav>
-
-      <br><br>
 
       <div id="post-content">
         <h3>Det gode liv i Liverpool</h3>
